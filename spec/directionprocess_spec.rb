@@ -2,8 +2,8 @@ require 'directionprocess.rb'
 
 
 describe DirectionProcess do 
-	let(:array) { [] }
-	let(:directionprocess) { described_class.new(array) }
+	let(:dir) { [] }
+	let(:directionprocess) { described_class.new(dir) }
 
 	describe "#initialize" do
 		it "initalizes an array" do
@@ -18,4 +18,13 @@ describe DirectionProcess do
 			expect(directionprocess.move).to be_empty
 		end
 	end
+
+	describe "#pointing" do 
+		let(:dir) { ["left"]}
+		it "updated the current direction to point left" do
+			directionprocess.pointing
+			expect(directionprocess.curr_position).to eq 270
+		end
+	end
+
 end
