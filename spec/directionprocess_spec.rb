@@ -69,5 +69,16 @@ describe DirectionProcess do
 				expect(directionprocess.move).to eq ([["forward", 0]])
 			end 
 		end
+		context "curr_position gets updated" do
+			it "current position is updated from -90 to 270" do
+				directionprocess.curr_position = -90
+				expect { directionprocess.update }.to change { directionprocess.curr_position }.by(360)
+			end 
+
+			it "current position is updated from 360 to 0" do
+				directionprocess.curr_position = 360
+				expect { directionprocess.update }.to change { directionprocess.curr_position }.by(-360)
+			end 
+		end
 	end
 end

@@ -1,5 +1,5 @@
 class DirectionProcess
-	attr_reader :curr_position, :directions, :move
+	attr_accessor :curr_position, :directions, :move
 
 	def initialize(directions = [])
 	@directions = directions
