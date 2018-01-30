@@ -55,5 +55,12 @@ describe DirectionProcess do
 				expect(directionprocess.move).to eq ([["forward", 90]])
 			end 
 		end
+		context "moves forward to the left" do
+			let(:dir) { ["left", "forward"]}
+			it "moves forward to the left" do
+				directionprocess.pointing
+				expect(directionprocess.move).to eq ([["forward", 270]])
+			end 
+		end
 	end
 end
