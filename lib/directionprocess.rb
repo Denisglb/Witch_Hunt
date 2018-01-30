@@ -1,3 +1,5 @@
+require_relative './WhichHunt'
+
 class DirectionProcess
 	attr_accessor :curr_position, :directions, :move
 
@@ -32,4 +34,6 @@ class DirectionProcess
 	end 
 
 end
+
+
 
