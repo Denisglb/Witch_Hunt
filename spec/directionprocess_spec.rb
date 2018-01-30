@@ -20,11 +20,19 @@ describe DirectionProcess do
 	end
 
 	describe "#pointing" do 
-		let(:dir) { ["left"]}
-		it "updated the current direction to point left" do
-			directionprocess.pointing
-			expect(directionprocess.curr_position).to eq 270
+		context "look left" do
+			let(:dir) { ["left"]}
+			it "updated the current direction to point left" do
+				directionprocess.pointing
+				expect(directionprocess.curr_position).to eq 270
+			end
+		end
+		context "look right" do
+			let(:dir) { ["right"]}
+			it "updated the current direction to point right" do
+				directionprocess.pointing
+				expect(directionprocess.curr_position).to eq 90
+			end 
 		end
 	end
-
 end
