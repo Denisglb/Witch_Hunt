@@ -34,5 +34,12 @@ describe DirectionProcess do
 				expect(directionprocess.curr_position).to eq 90
 			end 
 		end
+		context "updates position" do
+			let(:dir) { ["right", "left"]}
+			it "updated the current direction from right left" do
+				directionprocess.pointing
+				expect(directionprocess.curr_position).to eq 0
+			end 
+		end
 	end
 end
