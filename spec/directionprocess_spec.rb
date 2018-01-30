@@ -41,5 +41,12 @@ describe DirectionProcess do
 				expect(directionprocess.curr_position).to eq 0
 			end 
 		end
+		context "updates position for full circle" do
+			let(:dir) { ["left", "left","left", "left"]}
+			it "updated the current direction from moving left 4 times" do
+				directionprocess.pointing
+				expect(directionprocess.curr_position).to eq 0
+			end 
+		end
 	end
 end
