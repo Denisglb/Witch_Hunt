@@ -8,5 +8,6 @@ class WitchHunt
 	def directions
 		self.class.get("/api/d.divilly@gmail.com/directions").parsed_response["directions"]
 	end
-
 end
+
+# p witchhunt = WitchHunt.new.directions

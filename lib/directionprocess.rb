@@ -10,22 +10,20 @@ class DirectionProcess
 	end
 
 	def pointing
-		
-		directions.each do |i| 
-			if i == "left"
+		directions.each do |dir| 
+			if dir == "left"
 				@curr_position -= 90
 				update
 
-			elsif i == "right" 
+			elsif dir == "right" 
 				@curr_position += 90
 				update
-
 			else
-				i == "forward"
-				@move << [i, curr_position]
+				dir == "forward"
+				@move << [curr_position]
 			end
 		end
-		@move
+		@move.flatten
 	end
 	
 	def update
@@ -34,6 +32,9 @@ class DirectionProcess
 	end 
 
 end
+
+
+
 
 
 

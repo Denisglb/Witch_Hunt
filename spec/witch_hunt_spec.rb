@@ -17,3 +17,6 @@ describe WitchHunt do
 		end
 	end
 end
+
+# Testing for page 200 erorrs 
+# Think about adding an if there api is broken then add a break in the programme
