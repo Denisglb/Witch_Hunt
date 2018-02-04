@@ -3,7 +3,7 @@
 class CoOrdinantes
 attr_reader :instructions, :direction, :x_value, :y_value, :final
 	
-	def initialize(directions)
+	def initialize(directions = [])
 	@direction = directions
 	@x_value = 0
 	@y_value = 0
