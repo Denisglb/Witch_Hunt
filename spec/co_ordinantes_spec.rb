@@ -29,7 +29,7 @@ describe CoOrdinantes do
 		end
 
 		it "filters through the direction array and returns the number of negative x-values" do
-			expect(co_ordinates.x_co_ordinantes_negative).to be_equal(1)
+			expect(co_ordinates.x_co_ordinantes_negative).to be_equal(-1)
 			expect{co_ordinates.x_co_ordinantes_negative}.to change{co_ordinates.x_value}.by(-1)
 		end
 
@@ -39,8 +39,8 @@ describe CoOrdinantes do
 		end
 
 		it "filters through the direction array and returns the number of negative y-values" do
-			expect(co_ordinates.y_co_ordinantes_negative).to be_equal(1)
-			# expect(co_ordinates.y_value).to be_equal(-1)
+			expect(co_ordinates.y_co_ordinantes_negative).to be_equal(-1)
+			expect{co_ordinates.y_co_ordinantes_negative}.to change{co_ordinates.y_value}.by(-1)
 		end
 	end
 end
