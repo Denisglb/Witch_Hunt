@@ -24,23 +24,26 @@ describe CoOrdinantes do
 
 	context "finding the final co_ordinates" do
 		it "filters through the direction array and returns the number of positive x-values" do
-			expect(co_ordinates.x_co_ordinantes_positive).to be_equal(1)
 			expect{co_ordinates.x_co_ordinantes_positive}.to change{co_ordinates.x_value}.by(1)
 		end
 
 		it "filters through the direction array and returns the number of negative x-values" do
-			expect(co_ordinates.x_co_ordinantes_negative).to be_equal(-1)
 			expect{co_ordinates.x_co_ordinantes_negative}.to change{co_ordinates.x_value}.by(-1)
 		end
 
 		it "filters through the direction array and returns the number of positive y-values" do
-			expect(co_ordinates.y_co_ordinantes_positive).to be_equal(1)
 			expect{co_ordinates.y_co_ordinantes_positive}.to change{co_ordinates.y_value}.by(1)
 		end
 
 		it "filters through the direction array and returns the number of negative y-values" do
-			expect(co_ordinates.y_co_ordinantes_negative).to be_equal(-1)
 			expect{co_ordinates.y_co_ordinantes_negative}.to change{co_ordinates.y_value}.by(-1)
+		end
+	end
+
+	context "Returning final co_ordinates" do
+		it "returns final_co_ordinates as an array"do
+			co_ordinates.final_co_ordinantes
+			expect(co_ordinates.final).to be_an_instance_of(Array)
 		end
 	end
 end
